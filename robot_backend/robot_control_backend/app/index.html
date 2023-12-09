@@ -1,0 +1,23 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Client</title>
+</head>
+<body>
+    <div>
+        <h1>WebSocket Data</h1>
+        <p id="coordinates">Coordinates: </p>
+    </div>
+    <script>
+        const socket = new WebSocket('ws://localhost:8765');
+
+        socket.onmessage = (event) => {
+            console.log('Received:', event.data);
+            document.getElementById('coordinates').innerText = `Coordinates: ${event.data}`;
+            // Add your processing logic here
+        };
+    </script>
+</body>
+</html>
