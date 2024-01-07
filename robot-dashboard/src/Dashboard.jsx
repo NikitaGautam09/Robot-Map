@@ -36,7 +36,6 @@ const Dashboard = () => {
   };
 
   useEffect(() => {
-    // Update the path with the new coordinates
     if (coordinates.x !== 0 && coordinates.y !== 0) {
       setPath((prevPath) => [...prevPath, [coordinates.y, coordinates.x]]);
     }
@@ -45,7 +44,6 @@ const Dashboard = () => {
   const handleMissionClick = (missionNumber) => {
     setCurrentMission(missionNumber);
 
-    // Clear the path when starting a new mission
     setPath([]);
 
     axios
