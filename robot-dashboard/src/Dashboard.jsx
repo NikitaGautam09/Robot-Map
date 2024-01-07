@@ -64,7 +64,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+    <div style={{ display: 'flex'}}>
       <div style={{ flex: 1, position: 'relative' }}>
         <MapContainer center={[0, 0]} zoom={2} style={{ height: '100%', width: '100%' }}>
           <ImageOverlay
